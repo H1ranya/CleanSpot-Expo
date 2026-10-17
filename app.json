@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "CleanSpot",
+    "slug": "cleanspot",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cleanspot.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "CleanSpot requires access to your camera to capture evidence of illegal dumping and overflowing bins.",
+        "NSLocationWhenInUseUsageDescription": "CleanSpot requires access to your location to accurately geo-tag illegal dumping and waste reports."
+      }
+    },
+    "android": {
+      "package": "com.cleanspot.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "CleanSpot requires access to your camera to capture evidence of illegal dumping and overflowing bins."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "CleanSpot requires access to your location to accurately geo-tag illegal dumping and waste reports."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "64d21dd6-fe7d-4917-a32e-bbee11b3607b"
+      }
+    }
+  }
+}

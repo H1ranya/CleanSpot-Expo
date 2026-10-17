@@ -1,0 +1,17 @@
+# EAS Build Ignore (Overrides .gitignore for EAS uploads)
+node_modules/
+.expo/
+dist/
+web-build/
+*.jks
+*.p8
+*.p12
+*.key
+*.pem
+.agents
+.claude
+android/
+ios/
+
+# Include .env so EXPO_PUBLIC_* Firebase config is packaged into the APK
+!.env
